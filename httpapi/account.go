@@ -1,4 +1,4 @@
-package api
+package httpapi
 
 type GetAccountRequest struct {
 	Address            string             `json:"address"`
