@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	lastBlockNum = 0
+	lastBlockNum = 0 // TODO 优化为近 100 个交易，因为不同节点之间可能存在共识差异导致最新区块重复获得
 )
 
 func CheckBlockTrans(ctx context.Context, blockNum int, txIDs []string) {
