@@ -18,3 +18,11 @@ func TestClient_GetNowBlock(t *testing.T) {
 	assert.Nil(t, err)
 	t.Log(resp)
 }
+
+func TestClient_GetBlockByNum(t *testing.T) {
+	ctx := context.Background()
+	client := getTestClient()
+	resp, err := client.GetBlockByNum(ctx, GetBlockByNumRequest{Num: 43284519})
+	assert.Nil(t, err)
+	t.Log(resp)
+}
